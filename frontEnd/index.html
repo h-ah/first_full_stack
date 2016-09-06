@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" ng-app="RoutingApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ِAlMakassed</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+	<link rel="stylesheet" type="text/css" href="node_modules/toastr/build/toastr.css">
+
+	<link type="text/css" rel="stylesheet" href="style/style.css">
+	<link type="text/css" rel="stylesheet" href="style/formoid-solid-blue.css">
+
+
+
+</head>
+
+<body>
+	<div class="container-fluid ">
+		<div class="row ">
+			<div class="col-xs-8 col-xs-offset-2">
+			</div>
+		</div>
+		<div class="row ">
+			<div class="col-xs-8 col-xs-offset-2 ">
+				<div class="row">
+					<div class="col-xs-12 boxh   ">
+						<nav class="navbar  cntr ">
+							<a href="#/"><h1>لوائح الكتب المدرسية</h1></a>
+						</nav>
+					</div>
+				</div>
+				<div class="row">
+					<div ng-view class="col-xs-12 box2 white ">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 boxh   ">
+						<nav class="navbar  cntr ">
+							<a href="#/order"><h1>طلب الكتب</h1></a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+	</div>
+	<footer class="cntr"> www.makassed.org
+		<br> tel:01-313370 ext:273</footer>
+
+	<script src="js/iframe.js"></script>
+	<script src="js/formoid-solid-blue.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+	<script src="node_modules/toastr/toastr.js"></script>
+
+	<script type="text/javascript">
+		CRISP_WEBSITE_ID = "fa878262-ccce-464a-b119-2c5903cff8cc";
+		(function () {
+			d = document;
+			s = d.createElement("script");
+			s.src = "https://client.crisp.im/l.js";
+			s.async = 1;
+			d.getElementsByTagName("head")[0].appendChild(s);
+		})();
+	</script>
+
+
+	<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js" type="text/javascript"></script>
+
+
+	<script src="app.js"></script>
+	<script src="components/home/home.js"></script>
+	<script src="components/order/order.js"></script>
+	<script src="components/omarsec/omarsec.js"></script>
+	<script src="components/alisec/alisec.js"></script>
+	<script src="components/abibaker/abibaker.js"></script>
+	<script src="components/aicha/aicha.js"></script>
+	<script src="components/aliprim/aliprim.js"></script>
+	<script src="components/khadija/khadija.js"></script>
+	<script src="components/khalid/khalid.js"></script>
+	<script src="components/omarprim/omarprim.js"></script>
+	<script src="components/khalil/khalil.js"></script>
+	<script src="components/orderList/orderList.js"></script>
+	<script src="books/books.json"></script>
+	<script src="components/OrderService.js"></script>
+	<script src="components/BookService.js"></script>
+
+</body>
+
+</html>

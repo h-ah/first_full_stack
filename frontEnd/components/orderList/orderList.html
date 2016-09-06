@@ -1,0 +1,44 @@
+<h1>order list</h1>
+<!--
+<div ng-repeat="order in OrderService.OrderList
+ track by $index"> {{order}}</div>
+-->
+
+
+
+<div class="row">
+	<div class="col-sm-8">
+		<div class="row">
+			<div class="col-sm-9" ng-repeat="order in OrderService.OrderList
+ track by $index">
+				{{ order.fullName}}
+				<div class="panel panel-default">
+
+					<div class="panel-heading">
+						<h3 class="panel-title" ng-class="{ 'completed text-muted' : order.completed }">{{ order.fullName}}</h3>
+
+					</div>
+
+					<div class="panel-body">
+						<div class="checkbox">
+							<label ng-class="{ 'completed text-muted' : order.completed }">
+								<input type="checkbox" ng-model="order.completed" ng-change="completeOrder(order, $index)"> {{ order.books }}
+							</label>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+<!--
+<div>
+<input type="text" ng-model="search">
+</div>
+<div ng-repeat="order in OrderService.OrderList|filter:search
+ track by $index"> {{order}}</div>-->

@@ -1,0 +1,117 @@
+<!--
+<h1 class = "white txt">{{tesst}}</h1>
+<p class = "txt">orderrrrrrrssssss</p>
+<h2>{{OrderService}}</h2>
+-->
+<div>
+
+	<form class="formoid-solid-blue" style="background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:99%;min-width:99%" method="post">
+		<div class="title">
+			<h2>طلب الكتب</h2></div>
+		<div class="element-select" title="الرجاء اختيار المدرسة">
+			<label class="title"><span class="required">المدرسة</span></label>
+			<div class="item-cont">
+				<div class="large"><span>
+				<select name="select" required="required" ng-model="order.school"  ng-change="getAllBooks(order)">
+
+		
+		<option value="khaled">كلية خالد بن الوليد</option>
+		<option value="Khadija">كلية خديجة الكبرى</option>
+		<option value="OmarSecondary">ثانوية عمر بن الخطاب</option>
+		<option value="AliSecondary">ثانوية علي بن ابي طالب</option>
+		<option value="AbiBakr">ابتدائية ابي بكر الصديق</option>
+		<option value="Aicha">ابتدائية عائشة ام المؤمنين</option>
+		<option value="OmarPrimary">ابتدائية عمر بن الخطاب</option>
+		<option value="AliPrimary">ابتدائية علي بن ابي طالب</option>
+		<option value="KhalilShehab">ابتدائية خليل شهاب</option>
+		
+		</select><i></i><span class="icon-place"></span></span>
+				</div>
+			</div>
+		</div>
+		<div class="element-select" title="الرجاء اختيار اللغة">
+			<label class="title"><span class="required">اللغة</span></label>
+			<div class="item-cont">
+				<div class="large"><span>
+				<select name="select1" required="required" ng-model="order.languagee" ng-change="getAllBooks(order)">
+
+		<option value="انكليزي">الانجليزية</option>
+		<option value="فرنسي">الفرنسية</option></select><i></i><span class="icon-place"></span></span>
+				</div>
+			</div>
+		</div>
+		<div class="element-select">
+			<label class="title"><span class="required">الصف</span></label>
+			<div class="item-cont">
+				<div class="large"><span><select name="select2" required="required" ng-model="order.class" ng-change="getAllBooks(order)" >
+
+		<option value="الأول أساسي">الأول أساسي</option>
+		<option value="الثاني أساسي">الثاني أساسي</option>
+		<option value="الثالث أساسي">الثالث أساسي</option>
+		<option value="الرابع أساسي">الرابع أساسي</option>
+		<option value="الخامس أساسي">الخامس أساسي</option>
+		<option value="السادس أساسي">السادس أساسي</option>
+		<option value="السابع أساسي">السابع أساسي</option>
+		<option value="الثامن أساسي">الثامن أساسي</option>
+		<option value="التاسع أساسي">التاسع أساسي</option>
+		<option value="الثانوي الأول">الثانوي الأول</option>
+		<option value="الثانوي الثاني علوم أ">الثانوي الثاني علوم أ</option>
+		<option value="الثانوي الثاني علوم ب">الثانوي الثاني علوم ب</option>
+		<option value="الثالث الثانوي إقتصاد و إجتماع">الثالث الثانوي إقتصاد و إجتماع</option>
+		<option value="الثالث ثانوي علوم عامة">الثالث ثانوي علوم عامة</option>
+		<option value="الثالث ثانوي علوم الحياة ">الثالث ثانوي علوم الحياة </option>
+		
+		</select><i></i><span class="icon-place"></span></span>
+				</div>
+			</div>
+		</div>
+		<div class="element-input" title="الرجاء ادخال اسم الطالب">
+			<label class="title"><span class="required">اسم الطالب</span></label>
+			<div class="item-cont">
+				<input class="large" type="text" name="input" required="required" placeholder="اسم الطالب الثلاثي" ng-model="order.fullName" /><span class="icon-place"></span></div>
+		</div>
+		<div class="element-input" title="الرجاء ادخال رقم الهاتف">
+			<label class="title"><span class="required">الهاتف</span></label>
+			<div class="item-cont">
+				<input class="large" type="text" name="input1" required="required" placeholder="الهاتف" ng-model="order.phone" /><span class="icon-place"></span></div>
+		</div>
+		<div class="element-input" title="الرجاء ادخال البريد الالكتروني">
+			<label class="title"><span class="required">البريد الالكتروني</span></label>
+			<div class="item-cont">
+				<input class="large" type="text" name="input2" required="required" placeholder="البريد الالكتروني" ng-model="order.email" /><span class="icon-place"></span></div>
+		</div>
+		<div class="element-input" title="الرجاء ادخال العنوان">
+			<label class="title"><span class="required">العنوان</span></label>
+			<div class="item-cont">
+				<input class="large" type="text" name="input3" required="required" placeholder="العنوان" ng-model="order.address" /><span class="icon-place"></span></div>
+		</div>
+
+		<!--
+		<div class="submit">
+			<input type="submit" value="عرض الكتب" ng-click="getAllBooks(order)" />
+		</div>
+-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 "></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 tab" ng-repeat="order in BookListData track by $index">
+					<label>
+						<input type="checkbox" name="checkbox[]" value={{order.bookname}} ng-model="order.selectedBooks" ng-checked="selection.indexOf(order.bookname) > -1" ng-click="addOrderBook(order.bookname)" />
+						<span><h5>{{order.bookname}}</h5></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!--		<div>{{selectedBooks}} </div>-->
+
+
+
+		<div class="submit floatBtn">
+			<input type="submit" value="ارسل  الطلب" ng-click="addOrder(order) " ng-disabled="isDisabled" />
+		</div>
+
+	</form>
+</div>
